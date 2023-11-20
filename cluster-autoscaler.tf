@@ -1,3 +1,7 @@
+data "aws_eks_cluster_auth" "eks" {
+  name = var.eks_name
+}
+
 data "aws_iam_openid_connect_provider" "this" {
   arn = var.openid_provider_arn
 }
